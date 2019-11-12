@@ -37,4 +37,7 @@ public interface ProductDAO {
 	
 	// 물품의 상세정보 가져오기
 	public Product getProductDetail(String productId);
+	
+	// 물품 수량 업데이트
+	public void setProductQuantity(String productId);
 }

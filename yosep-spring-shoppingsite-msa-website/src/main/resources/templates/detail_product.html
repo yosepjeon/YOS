@@ -102,8 +102,7 @@
 					class="dropdown-toggle" data-toggle="dropdown">
 						<div class="image image-icon bg-black text-grey-darker">
 							<i class="fa fa-user"></i>
-						</div> <span class="d-none d-md-inline">고객님</span> <b
-						class="caret"></b>
+						</div> <span class="d-none d-md-inline">고객님</span> <b class="caret"></b>
 				</a>
 					<div class="dropdown-menu dropdown-menu-right">
 						<a href="javascript:;" class="dropdown-item">Edit Profile</a> <a
@@ -332,8 +331,11 @@
 					<ul class="breadcrumb m-b-10 f-s-12">
 						<li class="breadcrumb-item"><a th:href="@{/main}">Home</a></li>
 						<li class="breadcrumb-item"><a th:text="${type}"></a></li>
-						<li class="breadcrumb-item"><a th:href="@{/product/__${type}__/__${detailType}__}" th:text="${detailType}"></a></li>
-						<li class="breadcrumb-item active"><a th:text="${product.productName}"></li>
+						<li class="breadcrumb-item"><a
+							th:href="@{/product/__${type}__/__${detailType}__}"
+							th:text="${detailType}"></a></li>
+						<li class="breadcrumb-item active"><a
+							th:text="${product.productName}"></li>
 					</ul>
 					<!-- END breadcrumb -->
 					<!-- BEGIN product -->
@@ -375,8 +377,7 @@
 								<!-- END product-thumbnail -->
 								<!-- BEGIN product-main-image -->
 								<div class="product-main-image" data-id="main-image">
-									<img th:src="${product.productProfileImageURL}"
-										alt="" />
+									<img th:src="${product.productProfileImageURL}" alt="" />
 								</div>
 								<!-- END product-main-image -->
 							</div>
@@ -386,8 +387,10 @@
 								<!-- BEGIN product-info-header -->
 								<div class="product-info-header">
 									<h1 class="product-title">
-										<span th:if="${product.productSale} > 0" class="label label-success"><span th:text="${product.productSale}"></span>% SALE</span>
-										<span th:text="${product.productName}"></span>
+										<span th:if="${product.productSale} > 0"
+											class="label label-success"><span
+											th:text="${product.productSale}"></span>% SALE</span> <span
+											th:text="${product.productName}"></span>
 									</h1>
 									<ul class="product-category">
 										<li><a th:text="${type}"></a></li>
@@ -410,8 +413,10 @@
 								<!-- END product-warranty -->
 								<!-- BEGIN product-info-list -->
 								<ul class="product-info-list">
-									<li><i class="fa fa-circle"></i> <span th:text="${product.productQuantity}"></span></li>
-									<li><i class="fa fa-circle"></i> <span th:text="${product.productDetail}"></span></li>
+									<li><i class="fa fa-circle"></i> <span
+										th:text="${product.productQuantity}"></span>개</li>
+									<li><i class="fa fa-circle"></i> <span
+										th:text="${product.productDetail}"></span></li>
 									<!-- <li><i class="fa fa-circle"></i> Fingerprint-resistant
 										oleophobic coating</li>
 									<li><i class="fa fa-circle"></i> A9 chip with 64-bit</li>
@@ -452,24 +457,28 @@
 								<!-- END product-social -->
 								<!-- BEGIN product-purchase-container -->
 								<div class="product-purchase-container">
-									<div th:if="${product.productSale} > 0" class="product-discount">
+									<div th:if="${product.productSale} > 0"
+										class="product-discount">
 										<span th:text="${product.productPrice}" class="discount"></span>원
 									</div>
 									<div class="product-price">
-										<div class="price"><span th:text="${product.productPrice - product.productPrice * product.productSale/100}"></span>원</div>
+										<div class="price">
+											<span
+												th:text="${product.productPrice - product.productPrice * product.productSale/100}"></span>원
+										</div>
 									</div>
 									<form id="addToCart" th:action="@{/order/__${type}__/__${detailType}__/__${product.productId}__}" method="POST">
-										<button id="addToCart" class="btn btn-inverse btn-lg" type="submit">ADD
+										<!-- <input type="hidden"> -->
+										<button id="addToCart" class="btn btn-inverse btn-lg">ADD
 											TO CART</button>
 									</form>
-									<input type="hidden">
 								</div>
 								<!-- END product-purchase-container -->
 							</div>
 							<!-- END product-info -->
 						</div>
 						<!-- END product-detail -->
-						
+
 					</div>
 					<!-- END product -->
 				</div>
@@ -487,8 +496,6 @@
 		<!-- end scroll to top btn -->
 	</div>
 	<!-- end page container -->
-
-
 
 	<!-- ================== BEGIN BASE JS ================== -->
 	<script src="/assets/plugins/jquery/jquery-3.3.1.min.js"></script>

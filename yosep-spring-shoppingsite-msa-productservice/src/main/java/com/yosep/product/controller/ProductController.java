@@ -66,4 +66,10 @@ public class ProductController {
 	public Product getProductDetail(@RequestParam(value="productId")String productId) {
 		return productComponent.getProductDetail(productId);
 	}
+	
+	@RequestMapping(value="/getProductByOrder")
+	public Product getProductsByOrder(@RequestParam("productId")String productId) {
+		
+		return productComponent.getProductDetail(productId);
+	}
 }

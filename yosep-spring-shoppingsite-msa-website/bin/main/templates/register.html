@@ -61,12 +61,13 @@
 				<!-- end register-header -->
 				<!-- begin register-content -->
 				<div class="register-content">
-					<form id="registerForm" action="http://localhost:8001/createUser" method="POST" class="margin-bottom-0">
+					<form id="registerForm" action="http://localhost:8001/createUser"
+						method="POST" class="margin-bottom-0">
 						<label class="control-label">ID <span class="text-danger">*</span></label>
 						<div class="row m-b-15">
 							<div class="col-md-8">
-								<input id="userId" name="userId" type="text" class="form-control" placeholder="ID"
-									required />
+								<input id="userId" name="userId" type="text"
+									class="form-control" placeholder="ID" required />
 							</div>
 							<div class="col-md-4">
 								<button id="checkDupIdBtn" type="button" class="btn btn-primary">중복확인</button>
@@ -92,8 +93,8 @@
 							class="text-danger">*</span></label>
 						<div class="row row-space-15">
 							<div class="col-md-12">
-								<input type="text" name="name" class="form-control" placeholder="Name"
-									required />
+								<input type="text" name="name" class="form-control"
+									placeholder="Name" required />
 							</div>
 						</div>
 						<label class="control-label">Email <span
@@ -115,8 +116,8 @@
 						<label class="control-label">Address</label>
 						<div class="row m-b-15">
 							<div class="col-md-8">
-								<input id="postcode" name="postCode" type="text" class="form-control"
-									placeholder="우편번호" required />
+								<input id="postcode" name="postCode" type="text"
+									class="form-control" placeholder="우편번호" required />
 							</div>
 							<div class="col-md-4">
 								<button type="button" class="btn btn-primary"
@@ -125,28 +126,27 @@
 						</div>
 						<div class="row m-b-15">
 							<div class="col-md-12">
-								<input id="roadAddress" name="roadAddr" type="text" class="form-control"
-									placeholder="도로명 주소" required />
+								<input id="roadAddress" name="roadAddr" type="text"
+									class="form-control" placeholder="도로명 주소" required />
 							</div>
 						</div>
 						<div class="row m-b-15">
 							<div class="col-md-12">
-								<input id="jibunAddress" name="jibunAddr" type="text" class="form-control"
-									placeholder="지번 주소" required /> 
-								<span id="guide"
-									style="color: #999; display: none"></span>
+								<input id="jibunAddress" name="jibunAddr" type="text"
+									class="form-control" placeholder="지번 주소" required /> <span
+									id="guide" style="color: #999; display: none"></span>
 							</div>
 						</div>
 						<div class="row m-b-15">
 							<div class="col-md-12">
-								<input id="extraAddress" name="extraAddr" type="text" class="form-control"
-									placeholder="참고 항목" required />
+								<input id="extraAddress" name="extraAddr" type="text"
+									class="form-control" placeholder="참고 항목" required />
 							</div>
 						</div>
 						<div class="row m-b-15">
 							<div class="col-md-12">
-								<input id="detailAddress" name="detailAddr" type="text" class="form-control"
-									placeholder="상세 주소" required />
+								<input id="detailAddress" name="detailAddr" type="text"
+									class="form-control" placeholder="상세 주소" required />
 							</div>
 						</div>
 						<input id="isCheckId" type="hidden" value=unChecked>

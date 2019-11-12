@@ -102,8 +102,7 @@
 					class="dropdown-toggle" data-toggle="dropdown">
 						<div class="image image-icon bg-black text-grey-darker">
 							<i class="fa fa-user"></i>
-						</div> <span class="d-none d-md-inline">고객님</span> <b
-						class="caret"></b>
+						</div> <span class="d-none d-md-inline">고객님</span> <b class="caret"></b>
 				</a>
 					<div class="dropdown-menu dropdown-menu-right">
 						<a href="javascript:;" class="dropdown-item">Edit Profile</a> <a
@@ -326,11 +325,11 @@
 
 			<!-- BEGIN product -->
 			<div class="product">
-                <form id="fileupload"
-                        th:action="@{/createProduct/__${type}__/__${detailType}__}"
-						method="POST" enctype="multipart/form-data" class>
-				<!-- BEGIN product-detail -->
-				<div class="product-detail">
+				<form id="fileupload"
+					th:action="@{/createProduct/__${type}__/__${detailType}__}"
+					method="POST" enctype="multipart/form-data" class>
+					<!-- BEGIN product-detail -->
+					<div class="product-detail">
 						<!-- BEGIN product-image -->
 						<div class="product-image">
 							<!-- <div class="fileupload-buttonbar">
@@ -341,8 +340,8 @@
 							</div> -->
 							<!-- <input
 								id="productProfileImageFiles" type="file" name="productProfileImageFiles[]" multiple="multiple"> -->
-								<input
-									id="productProfileImageFiles" type="file" name="productProfileImageFiles[]">
+							<input id="productProfileImageFiles" type="file"
+								name="productProfileImageFiles[]">
 							<!-- begin table -->
 							<!-- <table class="table table-striped table-condensed">
 								<thead>
@@ -363,66 +362,64 @@
 									</tr>
 								</tbody>
 							</table> -->
-                            <!-- end table -->
-                            <div class="fileList">
-
-                            </div>
+							<!-- end table -->
+							<div class="fileList"></div>
 						</div>
 						<!-- END product-image -->
-					<!-- </form> -->
+						<!-- </form> -->
 
-					<!-- BEGIN product-info -->
-					<div class="product-info">
-						<!-- BEGIN product-info-header -->
-						<div class="product-info-header">
-							<div class="form-group">
-								<label for="name">제품 이름 <span class="text-danger">*</span></label>
-								<input type="text" class="form-control" id="productName"
-									name="productName" />
-                            </div>
-                            <div class="form-group">
-								<label for="name">제품 코드 <span class="text-danger">*</span></label>
-								<input type="text" class="form-control" id="productId"
-									name="productId" />
-                            </div>
-                            <div class="form-group">
-								<label for="name">수량 <span class="text-danger">*</span></label>
-								<input type="number" class="form-control" id="productQuantity"
-									name="productQuantity" />
-                            </div>
-                            <div class="form-group">
-								<label for="name">Sales</label> <input type="number"
-									class="form-control" id="productSale" name="productSale" />
+						<!-- BEGIN product-info -->
+						<div class="product-info">
+							<!-- BEGIN product-info-header -->
+							<div class="product-info-header">
+								<div class="form-group">
+									<label for="name">제품 이름 <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" id="productName"
+										name="productName" />
+								</div>
+								<div class="form-group">
+									<label for="name">제품 코드 <span class="text-danger">*</span></label>
+									<input type="text" class="form-control" id="productId"
+										name="productId" />
+								</div>
+								<div class="form-group">
+									<label for="name">수량 <span class="text-danger">*</span></label>
+									<input type="number" class="form-control" id="productQuantity"
+										name="productQuantity" />
+								</div>
+								<div class="form-group">
+									<label for="name">Sales</label> <input type="number"
+										class="form-control" id="productSale" name="productSale" />
+								</div>
 							</div>
-						</div>
-						<!-- END product-info-header -->
+							<!-- END product-info-header -->
 
-						<!-- BEGIN product-info-list -->
-						<div class="form-group">
-							<label for="review">소개 <span class="text-danger">*</span></label>
-							<textarea class="form-control" rows="8" id="productDetail"
-								name="productDetail"></textarea>
-						</div>
-						<!-- END product-info-list -->
-
-						<!-- BEGIN product-purchase-container -->
-						<div class="product-purchase-container">
+							<!-- BEGIN product-info-list -->
 							<div class="form-group">
-								<label for="name">가격 <span
-									class="text-danger">*</span></label> <input type="number"
-									class="form-control" id="productPrice" name="productPrice" />
+								<label for="review">소개 <span class="text-danger">*</span></label>
+								<textarea class="form-control" rows="8" id="productDetail"
+									name="productDetail"></textarea>
 							</div>
-							<button id="createProductBtn" class="btn btn-inverse btn-lg" type="submit">INPUT
-								PRODUCT</button>
+							<!-- END product-info-list -->
+
+							<!-- BEGIN product-purchase-container -->
+							<div class="product-purchase-container">
+								<div class="form-group">
+									<label for="name">가격 <span class="text-danger">*</span></label>
+									<input type="number" class="form-control" id="productPrice"
+										name="productPrice" />
+								</div>
+								<button id="createProductBtn" class="btn btn-inverse btn-lg"
+									type="submit">INPUT PRODUCT</button>
+							</div>
+							<!-- END product-purchase-container -->
 						</div>
-						<!-- END product-purchase-container -->
+						<!-- END product-info -->
+						<!-- </form> -->
 					</div>
-                    <!-- END product-info -->
-                <!-- </form> -->
-				</div>
-				<!-- END product-detail -->
-				<!-- BEGIN product-tab -->
-				<!-- <div class="product-tab">
+					<!-- END product-detail -->
+					<!-- BEGIN product-tab -->
+					<!-- <div class="product-tab">
 
 					<ul id="product-tab" class="nav nav-tabs">
 						<li class="nav-item"><a class="nav-link active"
@@ -479,7 +476,7 @@
 						<input id="productType" type="hidden" th:value="${type}" >
 					</div>
 				</div> -->
-                </form>                
+				</form>
 			</div>
 			<!-- END product -->
 
@@ -497,10 +494,10 @@
 		data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
 	<!-- end scroll to top btn -->
 	</div>
-    <!-- end page container -->
-    
-    <!-- The template to display files available for upload -->
-    <!-- <script id="template-upload" type="text/x-tmpl">
+	<!-- end page container -->
+
+	<!-- The template to display files available for upload -->
+	<!-- <script id="template-upload" type="text/x-tmpl">
         <![CDATA[
 		{% for (var i=0, file; file=o.files[i]; i++) { %}
 		<tr class="template-upload fade show">
@@ -530,7 +527,7 @@
         {% } %}
         ]]>
     </script> -->
-    <!-- <script id="template-upload" type="text/x-tmpl">
+	<!-- <script id="template-upload" type="text/x-tmpl">
 		{% for (var i=0, file; file=o.files[i]; i++) { %}
 		<tr class="template-upload fade show">
 			<td>
@@ -558,9 +555,9 @@
 		</tr>
 		{% } %}
 	</script> -->
-	
+
 	<!-- The template to display files available for download -->
-    <!-- <script id="template-download" type="text/x-tmpl">
+	<!-- <script id="template-download" type="text/x-tmpl">
         <![CDATA[
 		{% for (var i=0, file; file=o.files[i]; i++) { %}
 			<tr class="template-download fade show">
@@ -664,8 +661,8 @@
 		<script src="../assets/plugins/jquery-file-upload/js/cors/jquery.xdr-transport.js"></script>
 	<![endif]-->
 	<!-- <script src="/assets/js/demo/form-multiple-upload.demo.min.js"></script> -->
-    <scrip src="/product/js/product.js"></scrip>
-    <!-- ================== END PAGE LEVEL JS ================== -->
+	<scrip src="/product/js/product.js"></scrip>
+	<!-- ================== END PAGE LEVEL JS ================== -->
 
 	<script>
 		$(document).ready(function() {

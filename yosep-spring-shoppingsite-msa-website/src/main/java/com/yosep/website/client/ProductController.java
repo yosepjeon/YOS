@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -93,10 +95,11 @@ public class ProductController {
 
 	@RequestMapping(value = "/detail_product/{type}/{detailType}", method = RequestMethod.GET)
 	public ModelAndView showProductDetailPage(@PathVariable("type") String type,
-			@PathVariable("detailType") String detailType,@RequestParam(value="productId")String productId) {
+			@PathVariable("detailType") String detailType,@RequestParam(value="productId")String productId,HttpSession session) {
 		ModelAndView mav = new ModelAndView();
 		Product product = restTemplate.getForObject("http://product-apigateway/api/product/getProductDetail?productId=" + productId, Product.class);
 		
+		mav.addObject("userId",(String)session.getAttribute("userId"));
 		mav.addObject("product",product);
 		mav.addObject("type",type);
 		mav.addObject("detailType",detailType);

@@ -53,6 +53,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		yoggaebi_product_description(productId,url,productDescription)
 		VALUES(#{productId},#{url},#{productDescription})
 	</insert>
+	
+	<update id="updateProductQuantity">
+		UPDATE yoggaebi_product
+		SET productQuantity = productQuantity - 1
+		WHERE productId = #{productId}
+	</update>
 
 	<select id="getProductsCount" resultType="int">
 		SELECT count(*)

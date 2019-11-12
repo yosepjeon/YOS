@@ -93,6 +93,12 @@ public class ProductDAOImpl implements ProductDAO {
 		// TODO Auto-generated method stub
 		return sqlSession.selectOne(NAMESPACE + ".getProductDetail",productId);
 	}
+	
+	@Override
+	public void setProductQuantity(String productId) {
+		// TODO Auto-generated method stub
+		sqlSession.update(NAMESPACE + ".updateProductQuantity",productId);
+	}
 
 	class ProductProfileImgElement {
 		String productId;

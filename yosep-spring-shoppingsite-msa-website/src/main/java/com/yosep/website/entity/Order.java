@@ -4,13 +4,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 public class Order {
 	private String orderId;
-	private String buyerId;
+	private String productId;
+	private String senderId;
 	private String senderName;
 	private String receiverName;
-	private String productId;
 	private String phone;
 	private String postCode;
 	private String roadAddr;

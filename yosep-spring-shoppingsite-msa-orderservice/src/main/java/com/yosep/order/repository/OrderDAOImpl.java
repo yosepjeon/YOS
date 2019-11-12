@@ -16,21 +16,33 @@ public class OrderDAOImpl implements OrderDAO{
 	SqlSession sqlSession;
 
 	@Override
-	public List<Order> orderList(String userId) {
+	public List<Order> orderListBeforeBuy(String userId) {
 		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectList(NAMESPACE + ".getOrderList",userId);
+	}
+	
+	@Override
+	public List<Order> orderListAfterBuy(String userId) {
+		// TODO Auto-generated method stub
+		return sqlSession.selectList(NAMESPACE + ".getOrderList",userId);
 	}
 
 	@Override
 	public void createOrder(Order order) {
 		// TODO Auto-generated method stub
-		
+		sqlSession.insert(NAMESPACE + ".createOrder",order);
 	}
 
 	@Override
-	public void updateOrder(Order order) {
+	public void updateOrder(String userId) {
 		// TODO Auto-generated method stub
-		
+		sqlSession.update(NAMESPACE + ".buyUpdateOrder",userId);
+	}
+
+	@Override
+	public void setOrderAddressElements(Order order) {
+		// TODO Auto-generated method stub
+		sqlSession.update(NAMESPACE + ".updateOrdersForPay",order);
 	}
 	
 }
