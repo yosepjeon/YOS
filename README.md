@@ -102,5 +102,5 @@
 ###### java -jar yosep-spring-shoppingsite-msa-userservice-0.0.1-SNAPSHOT.jar
 * * *
 ##### browser 서버
-###### java -jar yosep-spring-shoppingsite-msa-configserver-0.0.1-SNAPSHOT.jar
+###### java -jar yosep-spring-shoppingsite-msa-website-0.0.1-SNAPSHOT.jar
 
