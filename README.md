@@ -4,7 +4,7 @@
 ## 해당 프로젝트는 로컬환경에서 모두 실행한다는 기준으로 설명하고 있습니다. 각 서비스 별로 서버를 두어 실행하기 위해서는 
 ## Config 프로젝트에서 local호스트 설정값들을 모두 각자의 서비스 url로 설정하시고,
 ## Git의 Config Repository의 order-service-dev.properties, product-service-dev.properties의 설정 값중에서
-## eureka.client.serviceUrl.defaultZone:http://localhost:8761/eureka/ 부분들을 RabbitMQ를 따로 설치하신 서버의 URL로 수정하시기 바랍니다.
+## spring.rabbitmq.host=localhost 부분들을 RabbitMQ를 따로 설치하신 서버의 URL로 수정하시기 바랍니다.
 
 ### 1.1 순서
 #### 1) 해당 파일을 다운로드 받습니다.
