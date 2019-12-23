@@ -1,6 +1,10 @@
 # YOS
 
 ## 실행 방법
+## 해당 프로젝트는 로컬환경에서 모두 실행한다는 기준으로 설명하고 있습니다. 각 서비스 별로 서버를 두어 실행하기 위해서는 
+## Config 프로젝트에서 local호스트 설정값들을 모두 각자의 서비스 url로 설정하시고,
+## Git의 Config Repository의 order-service-dev.properties, product-service-dev.properties의 설정 값중에서
+## eureka.client.serviceUrl.defaultZone:http://localhost:8761/eureka/ 부분들을 RabbitMQ를 따로 설치하신 서버의 URL로 수정하시기 바랍니다.
 
 ### 1.1 순서
 #### 1) 해당 파일을 다운로드 받습니다.
@@ -77,11 +81,13 @@
 ######     user_udate datetime default CURRENT_TIMESTAMP
 ###### )default charset=utf8 collate utf8_general_ci;
 * * *
-#### 4) 두개의 프로그램은 가장 먼저 실행하되, 반드시 순서대로 프로그램을 실행해주세요.
+#### 4) RabbitMQ를 설치합니다.(해당 설명은 Local에 설치한다고 가정, MessageQueue 서버를 따로 둘 경우, 맨 위의 설명 참조...)
+* * *
+#### 5) 두개의 프로그램은 가장 먼저 실행하되, 반드시 순서대로 프로그램을 실행해주세요.
 ####    - java -jar yosep-spring-shoppingsite-msa-configserver-0.0.1-SNAPSHOT.jar
 ####    - java -jar yosep-spring-shoppingsite-msa-eurekaserver-0.0.1-SNAPSHOT.jar
 
-#### 4) 두개의 프로그램을 실행하였으면, 각 서비스를 실행할 서버에 나머지 프로그램들을 실행합니다.(로컬에 한꺼번에 실행 가능)
+#### 6) 두개의 프로그램을 실행하였으면, 각 서비스를 실행할 서버에 나머지 프로그램들을 실행합니다.(로컬에 한꺼번에 실행 가능)
 ##### order 서버
 ###### java -jar yosep-spring-shoppingsite-msa-order-apigateway-0.0.1-SNAPSHOT.jar
 ###### java -jar yosep-spring-shoppingsite-msa-orderservice-0.0.1-SNAPSHOT.jar
