@@ -11,12 +11,12 @@
 
 #### 4) 두개의 프로그램을 실행하였으면, user관련 프로그램을 실행시킬 서버에 
 
-######create table yoggaebi_product_profile_files(
-	productId varchar(300) not null,
-    fileId bigint primary key auto_increment,
-    fileName varchar(100) not null,
-    url varchar(300) not null,
-    product_rdate datetime default CURRENT_TIMESTAMP,
-    product_udate datetime default CURRENT_TIMESTAMP,
-    constraint fk_productprofile_productId_reference_yoggaebi_product foreign key(productId) references yoggaebi_product(productId) on delete cascade on update cascade
-)default charset=utf8 collate utf8_general_ci;
+###### create table yoggaebi_product_profile_files(
+######	productId varchar(300) not null,
+######    fileId bigint primary key auto_increment,
+######    fileName varchar(100) not null,
+######    url varchar(300) not null,
+######    product_rdate datetime default CURRENT_TIMESTAMP,
+######    product_udate datetime default CURRENT_TIMESTAMP,
+######    constraint fk_productprofile_productId_reference_yoggaebi_product foreign key(productId) references yoggaebi_product(productId) on delete cascade on update cascade
+###### )default charset=utf8 collate utf8_general_ci;
