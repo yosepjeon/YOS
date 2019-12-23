@@ -8,7 +8,8 @@
 
 ### 1.1 순서
 #### 1) 해당 파일을 다운로드 받습니다.
-#### 2) jar파일들 폴더에 접근합니다.
+#### 2) 기존의 제가 만든 Repository 설정을 사용해도 되지만, 그렇지 않으실 분들은 여러분들의 Git Repository에 설정파일을 모아놓을 Repository를 하나 만듭니다. 그다음 https://github.com/yosepjeon/yosep-spring-shoppingsite-msa-configserver에 있는 설정값들을 받아서 여러분들 서버 설정에 맞게 수정합니다. 마지막으로 https://github.com/yosepjeon/YOS의 yosep-spring-shoppingsite-msa-configserver파일을 다운받아서 src/main/resources/bootstrap.properties의 설정값 중 spring.cloud.config.server.git.uri=https://github.com/yosepjeon/yosep-spring-shoppingsite-msa-configserver.git 이 부분을 여러분의 config Repository 주소로 수정한 뒤에 Rebuild해서 새로운 jar파일을 만듭니다.
+####  
 #### 3) 각 서비스를 실행할 서버에 데이터베이스 테이블을 생성합니다.(하나의 서버에 모두 생성해서 하나의 서버에서 프로그램을 한꺼번에 실행해도 가능)
 #### *MYSQL을 사용해주시기 바랍니다.
 ##### 3-1. user 서비스를 실행할 서버의 데이터베이스에 해당 테이블을 생성합니다.
