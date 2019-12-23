@@ -21,8 +21,7 @@
 ######     user_rdate datetime default CURRENT_TIMESTAMP,
 ######     user_udate datetime default CURRENT_TIMESTAMP
 ###### )default charset=utf8 collate utf8_general_ci;
-#####
-#####
+* * *
 ##### 3-2. product 서비스를 실행할 서버의 데이터베이스에 해당 테이블을 생성합니다.
 ###### create table yoggaebi_product_profile_files(
 ###### productId varchar(300) not null,
@@ -33,7 +32,46 @@
 ###### product_udate datetime default CURRENT_TIMESTAMP,
 ###### constraint fk_productprofile_productId_reference_yoggaebi_product foreign key(productId) references yoggaebi_product(productId) on delete cascade on update cascade
 ###### )default charset=utf8 collate utf8_general_ci;
+###### create table yoggaebi_product_profile_files(
+###### 	productId varchar(300) not null,
+######     fileId bigint primary key auto_increment,
+######     fileName varchar(100) not null,
+######     url varchar(300) not null,
+######     product_rdate datetime default CURRENT_TIMESTAMP,
+######     product_udate datetime default CURRENT_TIMESTAMP,
+######     constraint fk_productprofile_productId_reference_yoggaebi_product foreign key(productId) references yoggaebi_product(productId) on delete cascade on update cascade
+###### )default charset=utf8 collate utf8_general_ci;
 
+###### create table yoggaebi_product_description(
+###### 	productId varchar(300) not null,
+######     descriptionId bigint primary key auto_increment,
+######     url varchar(300) not null,
+######     productDescription varchar(1000) not null,
+######     product_rdate datetime default CURRENT_TIMESTAMP,
+######     product_udate datetime default CURRENT_TIMESTAMP,
+###### 	constraint fk_productdescription_productId_reference_yoggaebi_product foreign key(productId) references yoggaebi_product(productId) on delete cascade on update cascade
+###### )default charset=utf8 collate utf8_general_ci;
+* * *
+##### 3-3 order 서비스를 실행할 서버의 데이터베이스에 해당 테이블을 생성합니다.
+###### create table yoggaebi_order(
+###### 	  orderId varchar(300) primary key,
+######     productId varchar(300) not null,
+######     senderId varchar(50) not null,
+######     senderName varchar(50) not null,
+######     receiverName varchar(50),
+######     phone varchar(50),
+######     postCode varchar(50),
+######     roadAddr varchar(50),
+######     jibunAddr varchar(50),
+######     extraAddr varchar(50),
+######     detailAddr varchar(50),
+######     isBuy boolean,
+######     user_rdate datetime default CURRENT_TIMESTAMP,
+######     user_udate datetime default CURRENT_TIMESTAMP
+###### )default charset=utf8 collate utf8_general_ci;
+* * *
+##### 3-3 order 서비스를 실행할 서버의 데이터베이스에 해당 테이블을 생성합니다.
+* * *
 #### 4) 두개의 프로그램은 가장 먼저 실행하되, 반드시 순서대로 프로그램을 실행해주세요.
 ####    - java -jar yosep-spring-shoppingsite-msa-configserver-0.0.1-SNAPSHOT.jar
 ####    - java -jar yosep-spring-shoppingsite-msa-eurekaserver-0.0.1-SNAPSHOT.jar
