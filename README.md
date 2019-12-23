@@ -84,7 +84,7 @@
 * * *
 #### 4) RabbitMQ를 설치합니다.(해당 설명은 Local에 설치한다고 가정, MessageQueue 서버를 따로 둘 경우, 맨 위의 설명 참조...)
 * * *
-#### 5) 두개의 프로그램은 가장 먼저 실행하되, 반드시 순서대로 프로그램을 실행해주세요.
+#### 5) 가장 먼저 RabbitMQ를 실행 -> configserver.jar 실행 -> eurekaserver.jar 실행!! 반드시 순서대로 프로그램을 실행해주세요.
 ####    - java -jar yosep-spring-shoppingsite-msa-configserver-0.0.1-SNAPSHOT.jar
 ####    - java -jar yosep-spring-shoppingsite-msa-eurekaserver-0.0.1-SNAPSHOT.jar
 
